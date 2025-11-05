@@ -14,7 +14,7 @@
       "name": "steerings-generator",
       "source": "./steerings-generator-cc-skill",
       "description": "Extract tacit engineering knowledge through guided interviews and generate structured steerings",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Timur Khakhalev",
         "email": "timur.khakhalev@gmail.com"
