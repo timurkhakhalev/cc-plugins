@@ -4,11 +4,27 @@ Personal marketplace for Claude Code plugins.
 
 ## Installation
 
-Add marketplace to Claude Code:
+1. Run Claude Code:
 
 ```bash
-claude plugin marketplace add https://github.com/timurkhakhalev/cc-plugin-marketplace
+claude
 ```
+
+2. Add this marketplace:
+
+```
+/plugin marketplace add https://github.com/timur-khakhalev/cc-plugins
+```
+
+3. Install a plugin:
+
+```
+/plugin install steerings-generator@timur-khakhalev-marketplace
+```
+
+4. Restart Claude Code
+
+5. Start using the plugin
 
 ## Available Plugins
 
@@ -16,17 +32,4 @@ claude plugin marketplace add https://github.com/timurkhakhalev/cc-plugin-market
 
 Extract tacit engineering knowledge through guided interviews and generate structured steerings.
 
-**Installation:**
-```bash
-claude plugin install steerings-generator
-```
-
 **Keywords:** steerings, knowledge-extraction, conventions, tacit-knowledge, documentation
-
-## Publishing Plugins
-
-To add plugins to this marketplace, add entries to `.claude-plugin/marketplace.json`.
-
-## License
-
-See individual plugin licenses.

@@ -15,18 +15,34 @@ Steerings Generator conducts context-aware interviews to capture implicit conven
 
 ## Installation
 
-### From GitHub
+1. Run Claude Code:
 
 ```bash
-claude plugins install github:timurkhakhalev/steerings-generator-cc-skill
+claude
 ```
+
+2. Add the marketplace:
+
+```
+/plugin marketplace add https://github.com/timur-khakhalev/cc-plugins
+```
+
+3. Install this plugin:
+
+```
+/plugin install steerings-generator@timur-khakhalev-marketplace
+```
+
+4. Restart Claude Code
+
+5. Start using the plugin
 
 ## Usage
 
 ### Basic Interview
 
 ```
-User: "Run a steerings interview"
+User: "Run a steerings interview, use skill"
 ```
 
 Claude will:
@@ -115,15 +131,3 @@ Customize output paths during interview:
 
 - Claude Code CLI
 - Write access to create steerings directories
-
-## License
-
-MIT
-
-## Author
-
-Timur Khakhalev <timur.khakhalev@gmail.com>
-
-## Repository
-
-https://github.com/timurkhakhalev/steerings-generator-cc-skill

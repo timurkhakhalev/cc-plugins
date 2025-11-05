@@ -1,13 +1,13 @@
 {
   "name": "steerings-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extract tacit engineering knowledge through guided interviews and generate structured steerings",
   "author": {
     "name": "Timur Khakhalev",
     "email": "timur.khakhalev@gmail.com"
   },
-  "repository": "https://github.com/timurkhakhalev/cc-plugin-marketplace",
-  "homepage": "https://github.com/timurkhakhalev/cc-plugin-marketplace",
+  "repository": "https://github.com/timur-khakhalev/cc-plugins",
+  "homepage": "https://github.com/timur-khakhalev/cc-plugins",
   "keywords": [
     "steerings",
     "knowledge-extraction",
