@@ -26,6 +26,30 @@
         "tacit-knowledge",
         "documentation"
       ]
+    },
+    {
+      "name": "headless-cli-agents",
+      "source": "./headless-cli-agents",
+      "description": "Comprehensive guide for running AI coding agents in non-interactive mode for automation, CI/CD pipelines, and scripting",
+      "version": "1.0.0",
+      "author": {
+        "name": "Timur Khakhalev",
+        "email": "timur.khakhalev@gmail.com"
+      },
+      "keywords": [
+        "cli-agents",
+        "automation",
+        "headless",
+        "cicd",
+        "scripting",
+        "non-interactive",
+        "claude-code",
+        "codex-cli",
+        "gemini-cli",
+        "opencode",
+        "qwen-code",
+        "droid-cli"
+      ]
     }
   ]
 }
