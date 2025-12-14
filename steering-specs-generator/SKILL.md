@@ -1,10 +1,10 @@
 ---
-name: tacit-knowledge
+name: steering-specs-generator
 description: Extract tacit engineering knowledge through guided interviews and generate structured steerings. Use when user mentions "steerings", "tacit knowledge", "conventions", "engineering practices", "interview", or wants to document team/project knowledge. Also activates when user asks for "steerings for X", "document X conventions", "continue steerings", "resume interview", or wants to extract knowledge about a specific topic. Supports reviewing and transforming existing steerings to standard format. Auto-detects existing sessions and offers to continue incomplete ones.
 allowed-tools: Read, Write, AskUserQuestion, Glob, Task
 ---
 
-# Tacit Knowledge Extractor
+# Steering Specs Generator
 
 Conducts context-aware interviews to extract tacit engineering knowledge and generate agent-readable steerings. Format: **Intent (Why) → Rules (What) → Practices (How) → Meta**.
 
@@ -154,7 +154,7 @@ prompt: |
   - Custom Description: {customTopicDescription}  # only if custom
 
   ## Context Files
-  - Pack Reference: .claude/skills/tacit-knowledge/pack-reference.md
+  - Pack Reference: .claude/skills/steering-specs-generator/pack-reference.md
   - Repo Context: {repoContextReportPath}
   - Docs & Conventions: {docsConventionsReportPath}
 
@@ -254,7 +254,7 @@ prompt: |
 
   Docs report: {docsConventionsReportPath}
   Repo report: {repoContextReportPath}
-  Template: .claude/skills/tacit-knowledge/steering-template.md
+  Template: .claude/skills/steering-specs-generator/steering-template.md
 
   Output paths: {steeringsPath}, {backlogPath}
 
@@ -283,7 +283,7 @@ prompt: |
 - ✅ "When implementing X, do Y" / "Use X for Y" / "New features require X"
 - ❌ "Proactively refactor X" / "Continue using X" / "Add X to existing code"
 
-**Action items file:** `{backlogPath}tacit-knowledge-action-items.md`
+**Action items file:** `{backlogPath}steering-specs-action-items.md`
 
 Severity: 🔴 CRITICAL (data loss, security) → 🟡 HIGH → 🟢 MEDIUM → 🔵 LOW → ⏸️ DEFERRED
 
@@ -294,7 +294,7 @@ Generated steerings:
 - {steeringsPath}*.md (N rules, M practices each)
 - {steeringsPath}index.md
 
-Action Items: {backlogPath}tacit-knowledge-action-items.md
+Action Items: {backlogPath}steering-specs-action-items.md
 - 🔴 Critical: N | 🟡 High: N | 🟢 Medium: N
 
 Session: {sessionsPath}{sessionId}/
@@ -363,7 +363,7 @@ Show changes per file, regenerate index.md.
 **Files generated:**
 - `{steeringsPath}*.md` — Steering files
 - `{steeringsPath}index.md` — Table of contents
-- `{backlogPath}tacit-knowledge-action-items.md` — Action items
+- `{backlogPath}steering-specs-action-items.md` — Action items
 - `{sessionsPath}{sessionId}/{packId}.md` — Interview responses per pack
 - `{sessionsPath}explore-*.md` — Discovery reports
 

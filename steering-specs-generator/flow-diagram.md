@@ -1,4 +1,4 @@
-# Tacit Knowledge Extractor - Flow Diagram
+# Steering Specs Generator - Flow Diagram
 
 ```mermaid
 flowchart TD
@@ -93,7 +93,7 @@ flowchart TD
             G1 --> G4[Extract ACTION_ITEMs → Backlog]
             G3 --> O1["{steeringsPath}*.md"]
             G3 --> O2["{steeringsPath}index.md"]
-            G4 --> O3["{backlogPath}tacit-knowledge-action-items.md"]
+            G4 --> O3["{backlogPath}steering-specs-action-items.md"]
         end
 
         O1 --> S6
@@ -163,5 +163,5 @@ flowchart TD
 └── {custom-topic}.md
 
 {backlogPath}/
-└── tacit-knowledge-action-items.md
+└── steering-specs-action-items.md
 ```

@@ -374,7 +374,7 @@ To add a new interview pack:
 3. **Update SKILL.md:** Add Explore prompt guidance for the new pack
 4. **Add to outcome mapping:** Steering filename for the new pack
 
-The tacit-knowledge skill will automatically support new packs when they're added to these reference files.
+The steering-specs-generator skill will automatically support new packs when they're added to these reference files.
 
 ---
 
