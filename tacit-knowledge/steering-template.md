@@ -9,7 +9,7 @@ This template defines the structure for generated steering documents. All steeri
 ```markdown
 # {Steering Title}
 
-{Brief 1-2 sentence overview of what this steering covers}
+{Brief 1 sentence overview of what this steering covers}
 
 ## Intent (Why)
 
@@ -56,20 +56,23 @@ This template defines the structure for generated steering documents. All steeri
 
 ## Meta
 
-**Scope**: {project | team | developer}
-
-**Task Types**: {comma-separated list: write-code, write-tests, refactor, etc.}
-
-**Source Interview**:
-- Session ID: `{sessionId}`
-- Date: `{YYYY-MM-DD}`
-- Pack: `{pack-id}`
-
-**Generated**: `{ISO 8601 timestamp}`
-
 **Dependencies**: {Related steerings that should be read together}
 - `{other-steering-name.md}` — {Why it's related}
 ```
+
+---
+
+## Meta Section Guidelines
+
+List related steerings that should be read together:
+
+```markdown
+**Dependencies**:
+- `architecture-invariants.md` — Defines layer boundaries referenced here
+- `testing-strategy.md` — Impacts module structure for testability
+```
+
+If no dependencies, write: `**Dependencies**: None`
 
 ---
 
@@ -200,39 +203,6 @@ this.eventBus.publish(new OrderCompletedEvent(order));
 
 ---
 
-## Meta Section Guidelines
-
-### Scope Values
-
-- `project`: Applies to all code in this repository
-- `team`: Applies to this team's work across projects
-- `developer`: Personal conventions for individual contributors
-
-### Task Type Values
-
-Common task types:
-
-- `write-code` — Implementing new features
-- `write-tests` — Creating tests
-- `write-docs` — Documentation
-- `refactor` — Restructuring code
-- `review` — Code review
-- `debug` — Bug fixing
-- `setup` — Project configuration
-
-### Dependencies
-
-List related steerings:
-
-```markdown
-**Dependencies**:
-
-- `architecture-invariants.md` — Defines layer boundaries referenced here
-- `testing-strategy.md` — Impacts module structure for testability
-```
-
----
-
 ## Validation Checklist
 
 Before finalizing a steering:
@@ -245,7 +215,7 @@ Before finalizing a steering:
 - [ ] Filename is kebab-case
 - [ ] All required sections present (Intent, Rules, Practices, Meta)
 - [ ] File is < 200 lines (split if longer)
-- [ ] Meta section complete
+- [ ] Meta has Dependencies (or "None")
 
 ---
 

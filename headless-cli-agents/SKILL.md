@@ -7,7 +7,7 @@ description: This skill provides comprehensive guidance for running AI coding ag
 
 ## Overview
 
-This skill enables the use of AI coding agents in non-interactive mode for automation scenarios. It provides command references, safety considerations, and practical examples for integrating AI agents into CI/CD pipelines, shell scripts, and other automated workflows.
+This skill enables the use of AI coding agents in non-interactive mode for automation scenarios. It provides command references, safety considerations, and practical examples for integrating AI agents into automated workflows.
 
 ## Quick Reference
 
@@ -21,13 +21,6 @@ This skill enables the use of AI coding agents in non-interactive mode for autom
 | Factory Droid | `droid exec "prompt"` | `--auto <level>` | Controlled automation |
 
 ## When to Use Headless Mode
-
-Use this skill when:
-- **CI/CD Pipelines**: Automated code reviews, test generation, documentation
-- **Shell Scripts**: Repetitive coding tasks, bulk operations
-- **Cron Jobs**: Scheduled maintenance, analysis tasks
-- **Git Hooks**: Pre-commit validation, post-commit analysis
-- **DevOps Automation**: Infrastructure as code, deployment preparation
 
 ## Core Concepts
 
@@ -44,7 +37,7 @@ claude -p "Review this code for security issues"
 claude -p "Generate tests for authentication module" --add-dir ./tests
 ```
 
-**OpenAI Codex CLI** - Best for complex refactoring and code transformation
+**OpenAI Codex CLI** - Best for complex refactoring and code transformation or a comprehensive research
 ```bash
 # Automated refactoring
 codex exec --full-auto "Refactor this module to use async/await"
@@ -65,6 +58,8 @@ cat src/ | gemini -p "Generate comprehensive API documentation"
 ### 2. Safety and Autonomy Levels
 
 Different agents provide varying levels of automation control:
+
+**Important**: Always specify a timeout of at least 15 minutes for headless commands to prevent hanging
 
 **Read-Only Mode (Safest)**
 ```bash
@@ -124,6 +119,9 @@ gemini -p "List all API endpoints" --output-format json
 opencode -p "Count lines of code" -f json
 claude -p "Generate test coverage report" > coverage_report.md
 ```
+
+Important to know for Claude Code!
+When you use `Bash` tool, you have to specify the timeout at least 15 min when you attempt to run any of these headless cli agents
 
 ## Common Workflows
 
@@ -194,35 +192,6 @@ if [ $? -ne 0 ]; then exit 1; fi
 claude -p "Generate daily code quality report" | mail -s "Code Quality" team@example.com
 ```
 
-## Best Practices
-
-### Security
-- Never use `--yolo` or equivalent flags in production environments
-- Validate AI-generated code before deployment
-- Use read-only mode for security-sensitive analysis
-- Implement human review for high-risk changes
-
-### Performance
-- Limit the scope of analysis (specific files vs entire codebase)
-- Use structured output formats for programmatic processing
-- Cache results when appropriate
-- Monitor API usage and costs
-
-### Reliability
-- Include fallback mechanisms for AI agent failures
-- Validate generated code with linters and tests
-- Use specific, well-defined prompts for consistent results
-- Implement retry logic for network issues
-
-### Error Handling
-```bash
-# Robust script pattern
-if ! claude -p "Generate tests" > tests.py; then
-  echo "AI generation failed, using fallback"
-  cp fallback_tests.py tests.py
-fi
-```
-
 ## Troubleshooting
 
 ### Common Issues
@@ -265,13 +234,3 @@ codex exec --debug "Debug task"
 ### references/
 
 **agent-specific-commands.md** - Detailed command documentation for all six CLI agents including flags, options, and specific usage patterns. Load this when you need comprehensive syntax reference for a particular agent.
-
-**use-case-examples.md** - Practical examples for CI/CD pipelines, shell scripts, and automation workflows. Load this when implementing specific automation scenarios or need concrete implementation patterns.
-
-### scripts/
-
-**validate-agent-setup.py** - Optional helper script to verify agent installations, API authentication, and basic functionality. Execute this to check if the required CLI agents are properly configured before using them in automation.
-
----
-
-**References contain detailed command documentation and practical examples that complement this guide.**

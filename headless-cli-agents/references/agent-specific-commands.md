@@ -8,8 +8,7 @@ claude -p "Your prompt here"
 ```
 
 ### Key Flags
-- `-p` or `--prompt`: Execute one-shot prompt and exit
-- `--add-dir <path>`: Add additional directory to workspace context
+- `-p`: Execute one-shot prompt and exit
 - `--model <model>`: Specify model (optional)
 
 ### Examples
@@ -19,9 +18,6 @@ claude -p "Explain this function"
 
 # Pipe input to Claude
 cat error.log | claude -p "Summarize these errors"
-
-# Multiple directory context
-claude -p "Review the API design" --add-dir ../api-specs
 ```
 
 ### Authentication
@@ -40,17 +36,17 @@ codex e "Your prompt here"  # Short alias
 ### Key Flags
 - `--full-auto`: Unattended operation with workspace-write sandbox
 - `--dangerously-bypass-approvals-and-sandbox` or `--yolo`: Complete hands-off mode (use carefully)
-- `--skip-git-repo-check`: Allow execution outside Git repositories
 - `--cd <path>`: Set working directory
-- `--model <model>` or `-m`: Specify model (e.g., `-m gpt-5-codex`)
+- `--model <model>` or `-m`: Specify model (e.g., `-m gpt-5.1`)
+- `--sandbox`: A sandbox types: `read-only`, `workspace-write`
+- `--config`: Pass config variables:
+    - `model_reasoning_effort`: Model reasoning effort: `low`, `medium`, `high`;
+    - 
 
 ### Examples
 ```bash
 # Automated refactoring
 codex exec --full-auto "Update all README links to HTTPS"
-
-# Outside Git repo
-codex exec --skip-git-repo-check --full-auto "Create hello world HTML"
 
 # Different working directory
 codex exec --cd /path/to/project "Fix failing tests"
@@ -60,6 +56,8 @@ codex exec --cd /path/to/project "Fix failing tests"
 ```bash
 # Pipe prompt from file
 codex exec - < prompt.txt
+
+codex exec --model gpt-5.1 --sandbox workspace-write --config model_reasoning_effort=low < /tmp/test.md
 
 # Standard input
 echo "Review this code" | codex exec -
