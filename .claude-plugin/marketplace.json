@@ -12,7 +12,7 @@
   "plugins": [
     {
       "name": "steerings-specs-generator",
-      "source": "./skills/steering-specs-generator",
+      "source": "./plugins/timur-khakhalev-pack/skills/steering-specs-generator",
       "description": "Extract tacit engineering knowledge through guided interviews and generate structured steerings",
       "version": "1.1.1",
       "author": {
@@ -29,7 +29,7 @@
     },
     {
       "name": "headless-cli-agents",
-      "source": "./skills/headless-cli-agents",
+      "source": "./plugins/timur-khakhalev-pack/skills/headless-cli-agents",
       "description": "Comprehensive guide for running AI coding agents in non-interactive mode for automation, CI/CD pipelines, and scripting",
       "version": "1.1.1",
       "author": {
