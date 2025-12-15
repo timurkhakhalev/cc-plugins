@@ -11,45 +11,14 @@
   },
   "plugins": [
     {
-      "name": "steerings-specs-generator",
-      "source": "./plugins/timur-khakhalev-pack/skills/steering-specs-generator",
-      "description": "Extract tacit engineering knowledge through guided interviews and generate structured steerings",
-      "version": "1.1.1",
+      "name": "timur-khakhalev-pack",
+      "source": "./plugins/timur-khakhalev-pack/",
+      "description": "Timur Khakhalev Plugins Pack",
+      "version": "1.0.0",
       "author": {
         "name": "Timur Khakhalev",
         "email": "timur.khakhalev@gmail.com"
-      },
-      "keywords": [
-        "steerings",
-        "knowledge-extraction",
-        "conventions",
-        "tacit-knowledge",
-        "documentation"
-      ]
-    },
-    {
-      "name": "headless-cli-agents",
-      "source": "./plugins/timur-khakhalev-pack/skills/headless-cli-agents",
-      "description": "Comprehensive guide for running AI coding agents in non-interactive mode for automation, CI/CD pipelines, and scripting",
-      "version": "1.1.1",
-      "author": {
-        "name": "Timur Khakhalev",
-        "email": "timur.khakhalev@gmail.com"
-      },
-      "keywords": [
-        "cli-agents",
-        "automation",
-        "headless",
-        "cicd",
-        "scripting",
-        "non-interactive",
-        "claude-code",
-        "codex-cli",
-        "gemini-cli",
-        "opencode",
-        "qwen-code",
-        "droid-cli"
-      ]
+      }
     }
   ]
 }
