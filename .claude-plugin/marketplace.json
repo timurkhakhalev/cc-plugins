@@ -29,6 +29,16 @@
         "name": "Timur Khakhalev",
         "email": "timur.khakhalev@gmail.com"
       }
-    }
+    },
+    {
+      "name": "codex-cli-subagent",
+      "source": "./plugins/codex-cli-subagent/",
+      "description": "Run Codex CLI as an subagent",
+      "version": "1.0.0",
+      "author": {
+        "name": "Timur Khakhalev",
+        "email": "timur.khakhalev@gmail.com"
+      }
+    },
   ]
 }
