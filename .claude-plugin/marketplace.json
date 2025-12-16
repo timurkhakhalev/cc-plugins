@@ -11,9 +11,19 @@
   },
   "plugins": [
     {
-      "name": "timur-khakhalev-pack",
-      "source": "./plugins/timur-khakhalev-pack/",
-      "description": "Timur Khakhalev Plugins Pack",
+      "name": "headless-cli-agents",
+      "source": "./plugins/headless-cli-agents/",
+      "description": "Headless cli agents Skill",
+      "version": "1.0.0",
+      "author": {
+        "name": "Timur Khakhalev",
+        "email": "timur.khakhalev@gmail.com"
+      }
+    },
+    {
+      "name": "steerings-specs-generator",
+      "source": "./plugins/steerings-specs-generator/",
+      "description": "Steerings specs generator Skill",
       "version": "1.0.0",
       "author": {
         "name": "Timur Khakhalev",
